@@ -205,3 +205,20 @@ export class Modals {
     this._enableScrolling = true;
   }
 }
+
+const nav = document.querySelector('.navigation');
+const list = document.querySelector('.navigation__list');
+const menuBtn = document.querySelector('.navigation__toogle');
+
+if (menuBtn) {
+  menuBtn.addEventListener('click', function (item) {
+    item.preventDefault();
+    nav.classList.toggle('navigation--open');
+    list.classList.toggle('navigation__list--open');
+    menuBtn.classList.toggle('navigation__toogle--open');
+  });
+}
+
+if (document.querySelector(' .no-js')) {
+  document.querySelector('.no-js').classList.remove('no-js');
+}

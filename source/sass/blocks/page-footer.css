@@ -1,0 +1,7 @@
+.page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 90px 50px 103px;
+  background: #011c40;
+}

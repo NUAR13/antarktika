@@ -14,10 +14,7 @@ body {
 html {
   font-style: normal;
   font-weight: 400;
-  font-size: $fz-default;
   line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,21 +25,37 @@ html {
 }
 
 body {
-  width: 100%;
-  height: 100%;
-
-  background-color: $color-default-white;
+  min-width: 320px;
+  max-width: 1366px;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: $font-family-main;
+  line-height: 150%;
+  color: #011c40;
+  background: #f9fbfd;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 a {
-  color: $color-default-black;
   text-decoration: none;
 }
 
-img,
-video {
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(100%);
+}
+
+img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -56,12 +69,6 @@ textarea {
 // rgba не подойдет, сконвертируйте цвет в hex без прозрачности
 // если в стилях уже используется box-shadow есть другое решение -
 // задать к списку транзишенов `background-color 10000000s ease-out`
-input:-webkit-autofill {
-  box-shadow: inset 0 0 0 1000px $color-default-white;
-
-  -webkit-text-fill-color: $color-default-black;
-}
-
 // firefox placeholder \ invalid fix + ios bdrs
 input,
 textarea {

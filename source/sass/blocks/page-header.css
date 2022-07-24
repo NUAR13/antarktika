@@ -1,0 +1,33 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 91px 103px;
+  background: url("../img/background-header.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 650px;
+  color: #f9fbfd;
+}
+
+.page-header h1 {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.page-header p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+.page-header__wrapper-info {
+  display: flex;
+  flex-direction: column;
+  margin: auto 93px;
+}

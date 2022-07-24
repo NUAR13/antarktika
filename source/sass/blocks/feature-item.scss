@@ -1,0 +1,68 @@
+.feature-item {
+  position: relative;
+  background-color: #f9fbfd;
+  padding: 82px 13px 25px 30px;
+
+  & h3 {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  & p {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 140%;
+    margin: 0;
+
+    @media (max-width: $vp-768) {
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &--ship::before {
+    content: "";
+    height: 32px;
+    width: 27px;
+    background: url("../img/svg/ship.svg");
+    position: absolute;
+    top: 13%;
+
+    @media (max-width: $vp-1024) {
+      top: 6%;
+    }
+  }
+
+  &--arrow::before {
+    content: "";
+    height: 21px;
+    width: 32px;
+    background: url("../img/svg/arrow.svg");
+    position: absolute;
+    top: 15%;
+
+    @media (max-width: $vp-1024) {
+      top: 8%;
+    }
+  }
+
+  &--boat::before {
+    content: "";
+    height: 15px;
+    width: 42px;
+    background: url("../img/svg/boat.svg");
+    position: absolute;
+    top: 16%;
+
+    @media (max-width: $vp-1024) {
+      top: 10%;
+    }
+  }
+
+  @media (max-width: $vp-1365) {
+    padding: 69px 16px 25px 20px;
+  }
+}

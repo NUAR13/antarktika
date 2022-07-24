@@ -1,0 +1,17 @@
+.cruises-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: $vp-1365) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: $vp-768) {
+    grid-template-columns: 1fr;
+  }
+}

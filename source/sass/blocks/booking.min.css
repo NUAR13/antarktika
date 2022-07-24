@@ -1,0 +1,1 @@
+.booking{display:grid;grid-template-columns:1fr 403px;column-gap:193px;align-items:center;background:url("../img/booking-background.webp");background-repeat:no-repeat;background-size:cover;padding:50px 163px;min-height:555px}.booking__wrapper-info h2{font-weight:700;font-size:40px;margin-top:0;margin-bottom:30px}.booking__wrapper-info p{max-width:352px;font-size:18px;margin:0}

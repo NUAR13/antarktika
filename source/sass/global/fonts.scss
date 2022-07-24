@@ -10,12 +10,28 @@
 // }
 
 @font-face {
-  font-style: normal;
+  font-family: "Montserrat";
   font-weight: 400;
-  font-family: "";
+  font-style: normal;
 
+  src: url("../fonts/MontserratAlternates-Regular") format("otf");
   font-display: swap;
-  src:
-    url("../fonts/.woff2") format("woff2"),
-    url("../fonts/.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: normal;
+
+  src: url("../fonts/MontserratAlternates-SemiBold") format("otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+
+  src: url("../fonts/MontserratAlternates-Bold") format("otf");
+  font-display: swap;
 }

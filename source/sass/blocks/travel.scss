@@ -1,0 +1,55 @@
+.travel {
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  column-gap: 100px;
+  padding: 120px 103px 120px;
+
+  @media (max-width: $vp-1365) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    padding: 100px 45px 85px;
+  }
+
+  @media (max-width: $vp-768) {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    padding: 55px 15px 65px;
+  }
+}
+
+.travel__wrapper-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #011c40;
+
+  & h2 {
+    font-weight: 600;
+    font-size: 28px;
+    margin-top: 7px;
+    margin-bottom: 31px;
+
+    @media (max-width: $vp-1365) {
+      max-width: 200px;
+      font-size: 26px;
+      line-height: 140%;
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+  }
+
+  & p {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+
+  @media (max-width: $vp-1365) {
+    justify-content: flex-start;
+  }
+}
+
+.travel__wrapper-img {
+  width: 100%;
+}

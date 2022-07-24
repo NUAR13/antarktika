@@ -1,0 +1,106 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 26px 103px 75px;
+  background-image: url("../img/background-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #011c40;
+  min-height: 650px;
+  color: #f9fbfd;
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    .page-header {
+      background-image: url("../img/background-header@2x.jpg");
+    }
+  }
+
+  & h1 {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 66px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    letter-spacing: 3.5px;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    @media (max-width: $vp-1365) {
+      font-size: 50px;
+      line-height: 61px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: $vp-768) {
+      font-size: 36px;
+      line-height: 125%;
+      margin-bottom: 25px;
+    }
+  }
+
+  & p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+
+    @media (max-width: $vp-1365) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (max-width: $vp-768) {
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+
+  @media (max-width: $vp-1365) {
+    min-height: 638px;
+    padding: 12px 45px 74px;
+  }
+
+  @media (max-width: $vp-1024) {
+    background-image: url("../img/background-header-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      .page-header {
+        background-image: url("../img/background-header-tablet@2x.jpg");
+      }
+    }
+  }
+
+  @media (max-width: $vp-768) {
+    min-height: 500px;
+    padding: 0 0 28px 15px;
+  }
+
+  @media (max-width: $vp-466) {
+    background-image: url("../img/background-header-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      .page-header {
+        background-image: url("../img/background-header-mobile@2x.jpg");
+      }
+    }
+  }
+}
+
+.page-header__wrapper-info {
+  display: flex;
+  flex-direction: column;
+  margin: auto 93px;
+
+  @media (max-width: $vp-1365) {
+    padding-right: 15px;
+    margin: auto 0;
+  }
+}

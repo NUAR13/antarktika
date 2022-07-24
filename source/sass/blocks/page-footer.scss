@@ -1,0 +1,17 @@
+.page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 42px 90px 40px 103px;
+  background: #011c40;
+
+  @media (max-width: $vp-1365) {
+    padding-left: 45px;
+    padding-right: 35px;
+  }
+
+  @media (max-width: $vp-768) {
+    flex-direction: column;
+    padding: 40px 15px 28px;
+  }
+}

@@ -1,0 +1,16 @@
+.social-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  list-style: none;
+}
+
+.social-item__link {
+  display: flex;
+  padding: 14px;
+}
+
+.social-item__link svg {
+  align-items: center;
+}

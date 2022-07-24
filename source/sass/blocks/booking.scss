@@ -1,0 +1,95 @@
+.booking {
+  display: grid;
+  grid-template-columns: 1fr 403px;
+  column-gap: 144px;
+  align-items: center;
+  background-image: url("../img/booking-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #011c40;
+  padding: 50px 163px;
+  min-height: 555px;
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    .booking {
+      background-image: url("../img/booking-background@2x.jpg");
+    }
+  }
+
+  @media (max-width: $vp-1365) {
+    padding: 102px 183px 100px 174px;
+    grid-template-columns: 1fr;
+    row-gap: 56px;
+  }
+
+  @media (max-width: $vp-1024) {
+    background-image: url("../img/booking-background-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      .booking {
+        background-image: url("../img/booking-background-tablet@2x.jpg");
+      }
+    }
+  }
+
+  @media (max-width: $vp-768) {
+    background-image: url("../img/booking-background-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    row-gap: 30px;
+    padding: 60px 15px 65px;
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      .booking {
+        background-image: url("../img/booking-background-mobile@2x.jpg");
+      }
+    }
+  }
+}
+
+.booking__wrapper-info {
+  & h2 {
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 2.5px;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    @media (max-width: $vp-1365) {
+      min-width: 423px;
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $vp-768) {
+      min-width: 194px;
+      font-size: 24px;
+      line-height: 130%;
+      margin-bottom: 15px;
+    }
+  }
+
+  & p {
+    max-width: 352px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 0;
+
+    @media (max-width: $vp-768) {
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+
+  @media (max-width: $vp-1365) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
