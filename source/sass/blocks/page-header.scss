@@ -17,12 +17,11 @@
     }
   }
 
-  & h1 {
+  h1 {
     font-weight: 700;
     font-size: 54px;
     line-height: 66px;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    letter-spacing: 3.5px;
     margin-top: 0;
     margin-bottom: 30px;
 
@@ -39,7 +38,7 @@
     }
   }
 
-  & p {
+  p {
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;

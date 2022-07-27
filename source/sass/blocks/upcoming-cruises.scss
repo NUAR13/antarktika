@@ -4,10 +4,9 @@
   align-items: center;
   padding: 120px 118px;
 
-  & h2 {
+  h2 {
     font-weight: 600;
     font-size: 28px;
-    letter-spacing: 1.5px;
     margin-top: 0;
     margin-bottom: 57px;
 
@@ -18,7 +17,7 @@
 
     @media (max-width: $vp-768) {
       font-size: 24px;
-      margin-bottom: 36px;
+      margin-bottom: 34px;
     }
   }
 

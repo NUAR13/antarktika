@@ -1,4 +1,4 @@
-.form-booking {
+.booking form {
   display: flex;
   flex-direction: column;
   padding: 50px;
@@ -9,12 +9,11 @@
   min-width: 290px;
   min-height: 455px;
 
-  & h3 {
+  h3 {
     font-weight: 500;
     font-size: 18px;
-    letter-spacing: 1.2px;
     margin-top: 0;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 
     @media (max-width: $vp-768) {
       margin-bottom: 28px;
@@ -39,6 +38,10 @@
   padding: 13px 16px;
   margin-bottom: 21px;
   border: none;
+
+  @media (max-width: $vp-768) {
+    margin-bottom: 19px;
+  }
 }
 
 .form-booking__label {
@@ -47,7 +50,7 @@
   margin-bottom: 33px;
   position: relative;
 
-  & p {
+  span:not(.form-booking__control-mark) {
     font-size: 10px;
     line-height: 130%;
     color: #f9fbfd;

@@ -9,10 +9,9 @@
   position: relative;
   background-color: #011c40;
 
-  & h3 {
+  h3 {
     font-weight: 500;
     font-size: 18px;
-    letter-spacing: 1.5px;
     color: #f9fbfd;
     margin: 0;
   }
@@ -290,7 +289,7 @@
   background: #011c40;
   padding: 27px 25px;
 
-  & h4 {
+  h4 {
     font-weight: 500;
     font-size: 18px;
     color: #f9fbfd;
@@ -309,7 +308,7 @@
   color: #f9fbfd;
   margin-bottom: 10px;
 
-  & p {
+  p {
     font-weight: 500;
     font-size: 14px;
     line-height: 140%;
@@ -317,7 +316,7 @@
     margin-bottom: 0;
   }
 
-  & span {
+  span {
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;

@@ -10,15 +10,35 @@
   }
 }
 
-.social-item__link {
+.social-list__link {
   display: flex;
   padding: 14px;
+
+  @media (max-width: $vp-1365) {
+    padding: 11px;
+  }
+}
+
+.social-list__icon {
+  display: flex;
+
+  @media (max-width: $vp-1365) {
+    display: none;
+  }
 
   svg {
     align-items: center;
   }
+}
+
+.social-list__icon-tablet {
+  display: none;
 
   @media (max-width: $vp-1365) {
-    padding: 11px;
+    display: flex;
+  }
+
+  svg {
+    align-items: center;
   }
 }

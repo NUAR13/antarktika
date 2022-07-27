@@ -1,13 +1,13 @@
 .travel {
   display: grid;
-  grid-template-columns: 1fr 560px;
-  column-gap: 100px;
+  grid-template-columns: 525px 560px;
+  column-gap: 75px;
   padding: 120px 103px 120px;
 
   @media (max-width: $vp-1365) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 325px 1fr;
     column-gap: 30px;
-    padding: 100px 45px 85px;
+    padding: 100px 45px 92px;
   }
 
   @media (max-width: $vp-768) {
@@ -23,25 +23,30 @@
   justify-content: center;
   color: #011c40;
 
-  & h2 {
+  h2 {
     font-weight: 600;
     font-size: 28px;
     margin-top: 7px;
     margin-bottom: 31px;
 
     @media (max-width: $vp-1365) {
-      max-width: 200px;
+      max-width: 210px;
       font-size: 26px;
       line-height: 140%;
       margin-top: 0;
-      margin-bottom: 14px;
+      margin-bottom: 7px;
+    }
+
+    @media (max-width: $vp-768) {
+      max-width: 208px;
+      font-size: 24px;
+      margin-bottom: 20px;
     }
   }
 
-  & p {
+  p {
     font-weight: 400;
     font-size: 16px;
-    letter-spacing: 1px;
     margin: 0;
   }
 

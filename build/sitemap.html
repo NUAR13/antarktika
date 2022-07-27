@@ -8,16 +8,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/>
     <meta name="description" content="Описание проекта">
     <title>Cruises to Antarctica</title>
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body class="no-js">
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation__logo" href="#">
           <picture>
             <source class="navigation__logo-icon" media="(max-width: 768px)" srcset="./img/svg/logo-mobile.svg">
             <source media="(max-width: 1024px)" srcset="./img/svg/logo-tablet.svg">
-            <img class="navigation__logo-icon" src="./img/svg/logo.svg" alt="Логотип Мишка">
+            <img class="navigation__logo-icon" src="./img/svg/logo.svg" width="70" height="38" alt="Логотип Путешествие в Антарктику">
           </picture>
         </a>
         <ul class="navigation__list">
@@ -37,8 +38,8 @@
         <button class="navigation__toogle"></button>
       </nav>
       <div class="page-header__wrapper-info">
-        <h1>Круизы в&nbspАнтарктику</h1>
-        <p>Волшебный мир айсбергов&nbspи&nbspпингвинов</p>
+        <h1>Круизы в Антарктику</h1>
+        <p>Волшебный мир айсбергов и пингвинов</p>
       </div>
     </header>
     <main class="page-main">
@@ -51,10 +52,12 @@
           <picture>
           <source type="image/webp" media="(max-width: 768px)" srcset="./img/travel-img-mobile.webp">
           <source type="image/webp" media="(max-width: 1024px)" srcset="./img/travel-img-tablet.webp">
-          <source type="image/webp"  srcset="./img/travel-img.webp" alt="Пингвины">
-
-          <source media="(min-width: 1150px)" srcset="img/travel-img-mobile.jpg 1x, img/travel-img-mobile@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/travel-img-tablet.jpg 1x, img/travel-img-tablet@2x.png 2x">
+          <source type="image/webp"  srcset="./img/travel-img.webp">
+          <!-- 1х: 290px 186px; 2x: 580px 372px -->
+          <source media="(max-width: 768px)" srcset="img/travel-img-mobile.jpg 1x, img/travel-img-mobile@2x.png 2x">
+          <!-- 1х: 324px 264px; 2x: 648px 528px -->
+          <source media="(max-width: 1365px)" srcset="img/travel-img-tablet.jpg 1x, img/travel-img-tablet@2x.png 2x">
+          <!-- 1х: 560px 301px; 2x: 1120px 601px -->
           <img src="./img/travel-img.jpg" srcset="img/travel-img@2x.png 2x" width="560" height="301" alt="Пингвины">
         </picture>
         </div>
@@ -65,15 +68,15 @@
         <ul class="feature-list">
           <li class="feature-item feature-item--ship">
             <h3>Небольшой круизный лайнер</h3>
-            <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума&nbspи&nbspочередей и даст возможность насладиться видами и природой.</p>
+            <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
           </li>
           <li class="feature-item feature-item--arrow">
             <h3>Система все включено</h3>
-            <p>Все наши круизы работают по&nbspсистеме “Все ключено”. Великолепные&nbspблюда&nbspи безлимитный бар доступны для вас 24 часа.</p>
+            <p>Все наши круизы работают по системе “Все ключено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
           </li>
           <li class="feature-item feature-item--boat">
             <h3>Экскурсионные туры на Zodiac</h3>
-            <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных&nbspлодках типа Zodiac в сопровождении <br>опытных экскурсоводов.</p>
+            <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac в сопровождении <br>опытных экскурсоводов.</p>
           </li>
         </ul>
       </section>
@@ -285,17 +288,26 @@
       <section class="booking">
         <div class="booking__wrapper-info">
           <h2>Раннее бронирование</h2>
-          <p>Забронируйте тур за 3-6 месяцев до&nbspдаты выезда и сэкономьте до 50%</p>
+          <p>Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
         </div>
-        <form class="form-booking" action="https://echo.htmlacademy.ru/" method="get">
+        <form action="https://echo.htmlacademy.ru/" method="get">
           <h3>Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
-          <input class="form-booking__input" type="name" id="name" name="name" placeholder="Имя">
+          <label class="visually-hidden" for="name">
+            <span>Имя закащика</span>
+          </label>
+          <input class="form-booking__input" type="text" id="name" name="name" placeholder="Имя">
+          <label class="visually-hidden" for="phone">
+            <span>Телефон закащика</span>
+          </label>
           <input class="form-booking__input" type="tel" id="phone" name="phone" placeholder="Телефон">
+          <label class="visually-hidden" for="email">
+            <span>Почта закащика</span>
+          </label>
           <input class="form-booking__input" type="email" id="email" name="email" placeholder="email">
           <label class="form-booking__label" for="data-processing">
             <input class="form-booking__processing visually-hidden" type="checkbox" name="data-processing" checked value="data-processing" id="data-processing">
             <span class="form-booking__control-mark"></span>
-            <p>Я согласен на обработку моих персональных данных</p>
+            <span>Я согласен на обработку моих персональных данных</span>
           </label>
           <button class="button" type="submit">Оставить заявку</button>
         </form>
@@ -306,8 +318,8 @@
           <iframe class="contacts__map-icon" src="https://yandex.ru/map-widget/v1/?um=constructor%3Abb271f4b15d77128a625939721c1efe99d3ff205f67fc2b3a11f387b820f3409&amp;source=constructor"></iframe>
         </div>
         <div class="contacts__wrapper-info">
-          <p>У вас ещё остались вопросы или сомнения? Приезжайте к&nbspнам в офис и мы вам все расскажем.</p>
-          <address>г. Санкт Петербург, ул.&nbspБольшая&nbspКонюшенная,&nbsp19/8</address>
+          <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
+          <address>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</address>
           <a href="tel:88002000000">8-800-200-00-00</a>
         </div>
       </section>
@@ -318,7 +330,7 @@
           <picture>
             <source media="(max-width: 768px)" srcset="img/svg/logo-mobile.svg">
             <source media="(max-width: 1024px)" srcset="img/svg/logo-tablet.svg">
-            <img class="navigation__logo-icon" src="img/svg/logo.svg" alt="Логотип Путешествие в Антарктику">
+            <img class="navigation__logo-icon" src="img/svg/logo.svg" width="70" height="38" alt="Логотип Путешествие в Антарктику">
           </picture>
         </a>
         <ul class="navigation__list">
@@ -338,32 +350,50 @@
       </nav>
       <ul class="social-list">
         <li class="social-list__item">
-          <a class="social-item__link" href="#">
-            <picture>
-              <source media="(max-width: 1024px)" srcset="img/svg/facebook-tablet.svg">
-              <img class="social__icon" src="img/svg/facebook.svg" alt="facebook">
-            </picture>
+          <a class="social-list__link" href="#">
+            <div class="social-list__icon-tablet">
+              <svg width="9" height="16" focusable="false">
+                <use xlink:href="img/sprite/sprite.svg#facebook-tablet"></use>
+              </svg>
+            </div>
+            <div class="social-list__icon">
+              <svg width="11" height="20" focusable="false">
+                <use xlink:href="img/sprite/sprite.svg#facebook"></use>
+              </svg>
+            </div>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-item__link" href="#">
-            <picture>
-              <source media="(max-width: 1024px)" srcset="img/svg/insta-tablet.svg">
-              <img class="social__icon" src="img/svg/insta.svg" alt="instagram">
-            </picture>
+          <a class="social-list__link" href="#">
+            <div class="social-list__icon-tablet">
+              <svg width="16" height="16" focusable="false">
+                <use xlink:href="img/sprite/sprite.svg#insta-tablet"></use>
+              </svg>
+            </div>
+            <div class="social-list__icon">
+              <svg width="21" height="20" focusable="false">
+                <use xlink:href="img/sprite/sprite.svg#insta"></use>
+              </svg>
+            </div>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-item__link" href="#">
-            <picture>
-              <source media="(max-width: 1024px)" srcset="img/svg/twitter-tablet.svg">
-              <img class="social__icon" src="img/svg/twitter.svg" alt="twitter">
-            </picture>
+          <a class="social-list__link" href="#">
+            <div class="social-list__icon-tablet">
+              <svg width="16" height="13" focusable="false">
+                <use xlink:href="img/sprite/sprite.svg#twitter-tablet"></use>
+              </svg>
+            </div>
+            <div class="social-list__icon">
+              <svg width="20" height="17" focusable="false">
+                <use xlink:href="img/sprite/sprite.svg#twitter"></use>
+              </svg>
+            </div>
           </a>
         </li>
       </ul>
     </footer>
-    /<script src="js/vendor.min.js"></script>
+    <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

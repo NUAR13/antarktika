@@ -42,19 +42,17 @@
   flex-direction: column;
   padding-top: 77px;
 
-  & p {
+  p {
     font-weight: 500;
     font-size: 18px;
-    letter-spacing: 1.2px;
     margin-top: 0;
     margin-bottom: 36px;
   }
 
-  & address {
+  address {
     position: relative;
     font-style: normal;
     font-size: 16px;
-    letter-spacing: 0.8px;
     margin-bottom: 21px;
     padding-left: 28px;
 
@@ -70,10 +68,9 @@
     }
   }
 
-  & a {
+  a {
     position: relative;
     font-size: 16px;
-    letter-spacing: 1.2px;
     color: #011c40;
     padding-left: 28px;
 

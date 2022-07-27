@@ -3,24 +3,19 @@
   background-color: #f9fbfd;
   padding: 82px 13px 25px 30px;
 
-  & h3 {
+  h3 {
     font-weight: 500;
     font-size: 18px;
-    letter-spacing: 1.5px;
+    line-height: 140%;
     margin-top: 0;
     margin-bottom: 12px;
   }
 
-  & p {
+  p {
     font-weight: 400;
     font-size: 14px;
-    letter-spacing: 1px;
     line-height: 140%;
     margin: 0;
-
-    @media (max-width: $vp-768) {
-      letter-spacing: 0.5px;
-    }
   }
 
   &--ship::before {
@@ -64,5 +59,9 @@
 
   @media (max-width: $vp-1365) {
     padding: 69px 16px 25px 20px;
+  }
+
+  @media (max-width: $vp-768) {
+    padding-bottom: 21px;
   }
 }

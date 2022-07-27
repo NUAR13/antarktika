@@ -53,10 +53,9 @@
 }
 
 .booking__wrapper-info {
-  & h2 {
+  h2 {
     font-weight: 700;
     font-size: 40px;
-    letter-spacing: 2.5px;
     margin-top: 0;
     margin-bottom: 30px;
 
@@ -74,10 +73,9 @@
     }
   }
 
-  & p {
+  p {
     max-width: 352px;
     font-size: 18px;
-    letter-spacing: 1px;
     margin: 0;
 
     @media (max-width: $vp-768) {
