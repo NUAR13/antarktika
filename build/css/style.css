@@ -265,6 +265,21 @@ button,
   width: max-content;
 }
 
+.navigation__logo-mobile {
+  display: none;
+  fill: #f9fbfd;
+}
+
+.navigation__logo-tablet {
+  display: none;
+  fill: #f9fbfd;
+}
+
+.navigation__logo-desktop {
+  display: block;
+  fill: #f9fbfd;
+}
+
 .navigation__list {
   display: -ms-grid;
   display: grid;
@@ -287,8 +302,8 @@ button,
   color: #f9fbfd;
 }
 
-.navigation__logo-icon {
-  fill: #117be6;
+.navigation--open > .navigation__logo .navigation__logo-mobile svg {
+  fill: #011c40;
 }
 
 .navigation__toogle {
@@ -868,6 +883,14 @@ button,
     line-height: 15px;
   }
 
+  .navigation__logo-tablet {
+    display: block;
+  }
+
+  .navigation__logo-desktop {
+    display: none;
+  }
+
   .navigation__list {
     -webkit-column-gap: 15px;
     -moz-column-gap: 15px;
@@ -1172,6 +1195,14 @@ button,
     padding-left: 0;
   }
 
+  .navigation__logo-mobile {
+    display: block;
+  }
+
+  .navigation__logo-tablet {
+    display: none;
+  }
+
   .navigation__list {
     display: none;
   }
@@ -1207,7 +1238,7 @@ button,
     right: 45px;
   }
 
-  .navigation--open .navigation__logo img {
+  .navigation--open .navigation__logo img path {
     fill: #f9fbfd;
   }
 
