@@ -659,7 +659,7 @@ button,
   margin-bottom: 30px;
 }
 
-.form-booking__input {
+form input {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   padding: 13px 16px;
@@ -667,7 +667,7 @@ button,
   border: none;
 }
 
-.form-booking__label {
+form label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -678,14 +678,14 @@ button,
   position: relative;
 }
 
-.form-booking__label span:not(.form-booking__control-mark) {
+form label span:not(.control-mark) {
   font-size: 10px;
   line-height: 130%;
   color: #f9fbfd;
   margin: 0 0 0 23px;
 }
 
-.form-booking__control-mark {
+.control-mark {
   position: absolute;
   top: 50%;
   left: 0;
@@ -699,7 +699,7 @@ button,
   background: #f9fbfd;
 }
 
-.form-booking__processing[type="checkbox"]:checked + .form-booking__control-mark::before {
+input[type="checkbox"]:checked + .control-mark::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -1416,15 +1416,15 @@ button,
     margin: 0;
   }
 
-  .form-booking__input {
+  form input {
     margin-bottom: 19px;
   }
 
-  .form-booking__label span:not(.form-booking__control-mark) {
+  form label span:not(.control-mark) {
     line-height: 120%;
   }
 
-  .form-booking__label {
+  form label {
     margin-bottom: 26px;
     line-height: 120%;
   }

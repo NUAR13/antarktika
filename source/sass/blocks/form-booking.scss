@@ -32,7 +32,7 @@
   }
 }
 
-.form-booking__input {
+form input {
   font-family: $font-family-main;
   font-size: 14px;
   padding: 13px 16px;
@@ -44,13 +44,13 @@
   }
 }
 
-.form-booking__label {
+form label {
   display: flex;
   align-items: center;
   margin-bottom: 33px;
   position: relative;
 
-  span:not(.form-booking__control-mark) {
+  span:not(.control-mark) {
     font-size: 10px;
     line-height: 130%;
     color: #f9fbfd;
@@ -67,7 +67,7 @@
   }
 }
 
-.form-booking__control-mark {
+.control-mark {
   position: absolute;
   top: 50%;
   left: 0;
@@ -79,7 +79,7 @@
   background: #f9fbfd;
 }
 
-.form-booking__processing[type="checkbox"]:checked + .form-booking__control-mark::before {
+input[type="checkbox"]:checked + .control-mark::before {
   position: absolute;
   top: 0;
   left: 0;
