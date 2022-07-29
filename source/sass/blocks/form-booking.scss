@@ -50,7 +50,7 @@ form label {
   margin-bottom: 33px;
   position: relative;
 
-  span:not(.control-mark) {
+  span {
     font-size: 10px;
     line-height: 130%;
     color: #f9fbfd;
@@ -67,7 +67,7 @@ form label {
   }
 }
 
-.control-mark {
+input[type="checkbox"] + span {
   position: absolute;
   top: 50%;
   left: 0;
@@ -77,9 +77,10 @@ form label {
   cursor: pointer;
   vertical-align: text-top;
   background: #f9fbfd;
+  margin: 0;
 }
 
-input[type="checkbox"]:checked + .control-mark::before {
+input[type="checkbox"]:checked + span::before {
   position: absolute;
   top: 0;
   left: 0;
