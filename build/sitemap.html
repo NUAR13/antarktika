@@ -8,8 +8,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/>
     <meta name="description" content="Описание проекта">
     <title>Cruises to Antarctica</title>
-    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" media="print" href="css/style.min.css" onload="this.media='all'">
+    <link rel="preload" as="image" href="img/background-header-mobile.webp" type="image/jpg">
+    <link rel="preload" as="image" href="img/background-header.webp" type="image/jpg">
   </head>
   <body class="no-js">
     <header class="page-header">
@@ -68,7 +70,7 @@
           <!-- 1х: 324px 264px; 2x: 648px 528px -->
           <source media="(max-width: 1365px)" srcset="img/travel-img-tablet.jpg 1x, img/travel-img-tablet@2x.png 2x">
           <!-- 1х: 560px 301px; 2x: 1120px 601px -->
-          <img src="./img/travel-img.jpg" srcset="img/travel-img@2x.png 2x" width="560" height="301" alt="Пингвины">
+          <img src="./img/travel-img.jpg" srcset="img/travel-img@2x.png 2x" loading="lazy" width="560" height="301" alt="Пингвины">
         </picture>
         </div>
 
@@ -413,7 +415,6 @@
         </li>
       </ul>
     </footer>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script defer  src="js/main.min.js"></script>
   </body>
 </html>

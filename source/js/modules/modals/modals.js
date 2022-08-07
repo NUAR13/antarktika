@@ -1,7 +1,7 @@
-import {ScrollLock} from '../../utils/scroll-lock';
-import {FocusLock} from '../../utils/focus-lock';
+// import {ScrollLock} from '../../utils/scroll-lock';
+// import {FocusLock} from '../../utils/focus-lock';
 
-export class Modals {
+class Modals {
   constructor(settings = {}) {
     this._scrollLock = new ScrollLock();
     this._focusLock = new FocusLock();
@@ -219,6 +219,6 @@ if (menuBtn) {
   });
 }
 
-if (document.querySelector(' .no-js')) {
+if (document.querySelector('.no-js')) {
   document.querySelector('.no-js').classList.remove('no-js');
 }

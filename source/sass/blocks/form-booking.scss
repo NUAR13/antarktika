@@ -42,6 +42,19 @@ form input {
   @media (max-width: $vp-768) {
     margin-bottom: 19px;
   }
+
+  &:hover {
+    background-color: #c3def8;
+  }
+
+  &:focus {
+    outline: 2px solid #c3def8;
+  }
+
+  &:active {
+    outline: none;
+    background-color: #bddefd;
+  }
 }
 
 form label {
@@ -92,4 +105,17 @@ input[type="checkbox"]:checked + span::before {
   content: "";
   background-image: url("../img/svg/arrow-form.svg");
   background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:hover + span {
+  background-color: #c3def8;
+}
+
+input[type="checkbox"]:focus + span {
+  outline: 2px solid #c3def8;
+}
+
+input[type="checkbox"]:active + span {
+  outline: none;
+  background-color: #bddefd;
 }

@@ -17,6 +17,19 @@
   @media (max-width: $vp-1365) {
     padding: 11px;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: 2px solid #e3ecf6;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 0.4;
+  }
 }
 
 .social-list__icon {
@@ -25,10 +38,6 @@
   @media (max-width: $vp-1365) {
     display: none;
   }
-
-  svg {
-    align-items: center;
-  }
 }
 
 .social-list__icon-tablet {
@@ -36,9 +45,5 @@
 
   @media (max-width: $vp-1365) {
     display: flex;
-  }
-
-  svg {
-    align-items: center;
   }
 }

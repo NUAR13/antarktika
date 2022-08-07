@@ -3,10 +3,10 @@
   flex-direction: column;
   position: relative;
   padding: 26px 103px 75px;
-  background-image: url("../img/background-header.jpg");
+  background-color: #011c40;
+  background-image: url("../img/background-header.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #011c40;
   min-height: 650px;
   color: #f9fbfd;
 
@@ -80,7 +80,7 @@
   }
 
   @media (max-width: $vp-466) {
-    background-image: url("../img/background-header-mobile.jpg");
+    background-image: url("../img/background-header-mobile.webp");
     background-repeat: no-repeat;
     background-size: cover;
 

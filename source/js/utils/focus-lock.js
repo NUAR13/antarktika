@@ -12,7 +12,7 @@ const SELECTORS = [
   '[tabindex]:not([tabindex^="-"])'
 ];
 
-export class FocusLock {
+class FocusLock {
   constructor() {
     this._lockedSelector = null;
     this._focusableElements = null;

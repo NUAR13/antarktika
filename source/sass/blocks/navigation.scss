@@ -1,5 +1,6 @@
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
 
@@ -58,6 +59,19 @@
   display: flex;
   align-items: center;
   width: max-content;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: 2px solid #e3ecf6;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 0.5;
+  }
 }
 
 .navigation__logo-mobile {
@@ -125,6 +139,19 @@
     font-size: 18px;
     line-height: 22px;
     color: #011c40;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: 2px solid #e3ecf6;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 0.5;
   }
 }
 

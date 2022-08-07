@@ -1,4 +1,4 @@
-export const iosChecker = () => {
+const iosChecker = () => {
   return [
     'iPad Simulator',
     'iPhone Simulator',

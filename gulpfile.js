@@ -14,6 +14,8 @@ const del = require('del');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 const gcmq = require('gulp-group-css-media-queries');
+const concat = require('gulp-concat');
+const terser = require('gulp-terser');
 
 const css = () => {
   return gulp.src('source/sass/style.scss')
@@ -24,7 +26,6 @@ const css = () => {
         grid: true,
       })]))
       .pipe(gcmq()) // выключите, если в проект импортятся шрифты через ссылку на внешний источник
-      .pipe(gulp.dest('build/css'))
       .pipe(csso())
       .pipe(rename('style.min.css'))
       .pipe(sourcemap.write('.'))
@@ -32,11 +33,17 @@ const css = () => {
       .pipe(server.stream());
 };
 
-const js = () => {
-  return gulp.src(['source/js/main.js'])
-      .pipe(webpackStream(webpackConfig))
+function js () {
+  return gulp.src(['source/js/*.js', 'source/js/modules/modals/*.js', 'source/js/utils/*.js'])
+  //.pipe(babel({presets: ['@babel/env']}))
+  .pipe(concat('main.min.js'))
+
+     //.pipe(webpackStream(webpackConfig))
+      .pipe(terser())
       .pipe(gulp.dest('build/js'))
-};
+
+      .pipe(server.stream());
+}
 
 const svgo = () => {
   return gulp.src('source/img/**/*.{svg}')

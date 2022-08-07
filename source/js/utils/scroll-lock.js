@@ -1,6 +1,6 @@
-import {iosChecker} from './ios-checker';
+// import {iosChecker} from './ios-checker';
 
-export class ScrollLock {
+class ScrollLock {
   constructor() {
     this._iosChecker = iosChecker;
     this._lockClass = this._iosChecker() ? 'scroll-lock-ios' : 'scroll-lock';

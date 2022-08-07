@@ -265,6 +265,7 @@
 
   &:hover .cruises-item__wrapper-info {
     display: flex;
+    box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   }
 
   @media (max-width: $vp-1365) {
